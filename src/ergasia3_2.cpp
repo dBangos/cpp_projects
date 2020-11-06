@@ -22,7 +22,7 @@ public:
         ace_flag=false;
     }
     void run(ac_channel<Card> &in_card, bool &end_round, bool &win){
-        while(in_card.available(1)){
+        if(in_card.available(1)){
             data=in_card.read();
             //std::cout<<"Data: "<<data<<std::endl;
             if(data==1){//if an ace appears
@@ -35,7 +35,7 @@ public:
                     win=true;
                     end_round=true;
                     //std::cout<<"Break1"<<std::endl;
-                    break;
+                    //break;
                 }
             }
             else{
@@ -48,13 +48,13 @@ public:
                 win=true;
                 end_round=true;
                 //std::cout<<"Break2"<<std::endl;
-                break;
+                //break;
             }
             else if(sum>21){
                 win=false;
                 end_round=true;
                 //std::cout<<"Break3"<<std::endl;
-                break;
+                //break;
             }
         }
     }//run
