@@ -11,8 +11,7 @@ static const int TestNum=20;
 
 class RunLengthEncoder{
 private:
-    ac_int<4, false> data;
-    ac_int<4, false> outint,outcount;
+    dtype data,outint,outcount;
 public:
     RunLengthEncoder(){//reset
         data=0;
