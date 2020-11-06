@@ -8,11 +8,9 @@
 static const int TestNum=20;
 
 void runlength_encode(ac_channel<ac_int<4, false> > &in,ac_channel<ac_int<4, false> > &out){
-    ac_int<4, false> data;
-    ac_int<4, false> outint,outcount;
+    ac_int<4, false> data=0;
+    ac_int<4, false> outint=0,outcount=0;
     if(in.available(10)){
-        
-        
         for(int i=0;i<10;++i){
             data=in.read();
             //std::cout<<"Data in read: "<<data<<std::endl;
@@ -50,7 +48,7 @@ int main(){
     ac_channel<ac_int<4, false> > in_stream;
     ac_channel<ac_int<4, false> > out_stream;
 
-    
+
     for (int i=0;i<TestNum;++i){
         for(int j=0;j<10;++j){
             arr[j]=std::rand()/(RAND_MAX/16);//assigns random values 0-15 
