@@ -19,7 +19,7 @@ public:
         outcount=0;
     }
     void run(ac_channel<dtype> &in, ac_channel<dtype> &out){   
-        while(in.available(1)){
+        if(in.available(1)){
             data=in.read();
             //std::cout<<"Data in read: "<<data<<std::endl;
             if(outcount==0){//an den uparxei prohgoumeno gia na sugrinw
