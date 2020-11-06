@@ -49,8 +49,8 @@ public:
 int main(){
     std::srand(std::time(NULL));
     int arr[10];
-    ac_channel<ac_int<4, false> > in_stream;
-    ac_channel<ac_int<4, false> > out_stream;
+    ac_channel<dtype> in_stream;
+    ac_channel<dtype> out_stream;
 
 
     for (int i=0;i<TestNum;++i){
