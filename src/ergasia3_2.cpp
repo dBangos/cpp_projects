@@ -59,7 +59,7 @@ public:
         }
     }//run
 };//class
-int testing(int *outsidearray){//function that passes an array to class Blackjack and prints the results
+inline void testing(int *outsidearray){//function that passes an array to class Blackjack and prints the results
     ac_channel<Card> in_stream;
     BlackJack instance1;//creating class object, resets previous instance
     bool win=0,end=0;
